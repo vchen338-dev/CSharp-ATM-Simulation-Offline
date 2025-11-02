@@ -1,5 +1,7 @@
 Unfinished :-)
-Soon to do
+
+
+Soon to do 👇👇👇
 - Account Registration UI and Function
 - Deposit Function
 - Card Function
