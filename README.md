@@ -13,7 +13,7 @@ This is a testing and educational project that simulates the functionalities of 
 - Account Setting Function
 - Withdraw Function
 - Transfer Function
-- Microsoft Excel DataBase for Offline or SQLite
+- Microsoft Excel DataBase for Offline or SQLite (Updated)
 
 ## Disclaimer
 
