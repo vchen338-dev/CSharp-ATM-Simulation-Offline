@@ -7,6 +7,7 @@ using System.Linq;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using System.Windows.Forms;
 
 
@@ -62,7 +63,9 @@ namespace ATM_Simulation__Offline_
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (txtUsername.Text == BankData.Name && txtPin.Text == BankData.Pin)
+            string username = txtUsername.Text;
+            string pin = txtPin.Text;   
+            if (ExcelDataBase.ValidateUser(username, pin))
             {
                 MessageBox.Show("Login Successful!", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
@@ -79,6 +82,14 @@ namespace ATM_Simulation__Offline_
         private void timer1_Tick(object sender, EventArgs e)
         {
             Livetime.Text = DateTime.Now.ToString("dddd, hh:mm:ss tt");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RegistrationUI regform = new RegistrationUI();
+            regform.ShowDialog(); ;
+
         }
     }
 }

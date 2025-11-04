@@ -151,7 +151,7 @@
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MainMenuUI";
-            this.Text = "Form1";
+            this.Text = "MainMenu";
             this.Load += new System.EventHandler(this.MainMenuForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

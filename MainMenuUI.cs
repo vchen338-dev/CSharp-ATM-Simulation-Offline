@@ -17,13 +17,13 @@ namespace ATM_Simulation__Offline_
         {
             InitializeComponent();
             timer1.Start();
-            label1.Text = "Welcome " + BankData.Name;
+            
 
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-            label1.Text = "Welcome " + BankData.Name;
+            label1.Text = "Welcome ";
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -33,7 +33,7 @@ namespace ATM_Simulation__Offline_
 
         private void MainMenuForm_Load(object sender, EventArgs e)
         {
-            label1.Text = "Welcome "  + BankData.Name;
+            label1.Text = "Welcome " ;
         }
 
         private void LivetimeMAinForm_Click(object sender, EventArgs e)

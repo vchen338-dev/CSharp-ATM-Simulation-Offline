@@ -1,0 +1,38 @@
+﻿# Ignore Visual Studio cache and build folders
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignore build output
+Debug/
+Release/
+x64/
+x86/
+build/
+[Bb]in/
+[Oo]bj/
+
+# Ignore temporary files
+*.tmp
+*.log
+*.vsidx
+
+# Ignore generated files
+*.exe
+*.dll
+*.pdb
+
+# Ignore NuGet packages
+*.nupkg
+packages/
+
+# Ignore backup and other system files
+Thumbs.db
+*.bak
+*.old
+*.cache
+*.swp
