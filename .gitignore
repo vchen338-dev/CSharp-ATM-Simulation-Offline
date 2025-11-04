@@ -7,15 +7,6 @@ obj/
 *.userosscache
 *.sln.docstates
 
-# Ignore build output
-Debug/
-Release/
-x64/
-x86/
-build/
-[Bb]in/
-[Oo]bj/
-
 # Ignore temporary files
 *.tmp
 *.log
