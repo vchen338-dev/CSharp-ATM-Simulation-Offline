@@ -55,6 +55,13 @@ namespace ATM_Simulation__Offline_
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MainMenuUI back = new MainMenuUI(username);
+            back.Show();
+            this.Hide();
+        }
     }
 }
 

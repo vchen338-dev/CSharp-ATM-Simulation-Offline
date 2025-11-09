@@ -35,15 +35,16 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtHistory
             // 
-            this.txtHistory.Location = new System.Drawing.Point(330, 86);
+            this.txtHistory.Location = new System.Drawing.Point(330, 131);
             this.txtHistory.Multiline = true;
             this.txtHistory.Name = "txtHistory";
-            this.txtHistory.Size = new System.Drawing.Size(255, 305);
+            this.txtHistory.Size = new System.Drawing.Size(255, 260);
             this.txtHistory.TabIndex = 0;
             this.txtHistory.TextChanged += new System.EventHandler(this.txtHistory_TextChanged);
             // 
@@ -89,6 +90,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "Go Back!";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -102,12 +104,25 @@
             this.label1.TabIndex = 5;
             this.label1.Text = resources.GetString("label1.Text");
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label2.Font = new System.Drawing.Font("Arial Narrow", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(333, 86);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(130, 33);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "HISTORY:";
+            // 
             // BalanceUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(620, 450);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
@@ -133,5 +148,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
