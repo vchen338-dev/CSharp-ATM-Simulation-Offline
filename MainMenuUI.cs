@@ -13,17 +13,23 @@ namespace ATM_Simulation__Offline_
 {
     public partial class MainMenuUI : Form
     {
-        public MainMenuUI()
+        private string currentUser;
+
+        public MainMenuUI(string username)
         {
             InitializeComponent();
             timer1.Start();
-            
+            currentUser = username;
+
+
 
         }
+   
+
 
         private void label1_Click(object sender, EventArgs e)
         {
-            label1.Text = "Welcome ";
+            label1.Text = "Welcome " + currentUser + "!";
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -33,12 +39,26 @@ namespace ATM_Simulation__Offline_
 
         private void MainMenuForm_Load(object sender, EventArgs e)
         {
-            label1.Text = "Welcome " ;
+            label1.Text = "Welcome " + currentUser + "!";
         }
 
         private void LivetimeMAinForm_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            BalanceUI balanceUI = new BalanceUI(currentUser);  
+            balanceUI.Show();
+            this.Hide();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            LoginUI lgout = new LoginUI();
+            lgout.Show();
+            this.Hide();
         }
     }
 }//latest

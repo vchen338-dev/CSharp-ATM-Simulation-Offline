@@ -95,6 +95,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtUsername);
             this.Name = "RegistrationUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration";
             this.ResumeLayout(false);
             this.PerformLayout();

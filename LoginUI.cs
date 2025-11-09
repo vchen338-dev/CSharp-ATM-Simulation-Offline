@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace ATM_Simulation__Offline_
 {
-
+   
 
     public partial class LoginUI : Form
     {
@@ -68,9 +68,10 @@ namespace ATM_Simulation__Offline_
             if (ExcelDataBase.ValidateUser(username, pin))
             {
                 MessageBox.Show("Login Successful!", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 this.Hide();
 
-                MainMenuUI mainMenu = new MainMenuUI();
+                MainMenuUI mainMenu = new MainMenuUI(username);
                 mainMenu.Show();
             }
             else

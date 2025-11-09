@@ -7,13 +7,13 @@ namespace ATM_Simulation__Offline_
 {
     internal class ExcelDataBase
     {
-        
+
         public static string filePath = @"C:\Git Repos\bin\Debug\DataBase.xlsx";
 
         public static string connectionString =
             "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + filePath + ";Extended Properties='Excel 12.0 Xml;HDR=YES;'";
 
-        
+
         public static bool ValidateUser(string username, string pin)
         {
             using (OleDbConnection connection = new OleDbConnection(connectionString))
@@ -33,7 +33,7 @@ namespace ATM_Simulation__Offline_
             }
         }
 
-        
+
         public static void RegisterUser(string username, string pin)
         {
             using (OleDbConnection connection = new OleDbConnection(connectionString))
@@ -44,7 +44,7 @@ namespace ATM_Simulation__Offline_
                 {
                     command.Parameters.AddWithValue("?", username);
                     command.Parameters.AddWithValue("?", pin);
-                    
+
                     command.ExecuteNonQuery();
                 }
             }
