@@ -36,27 +36,29 @@
             // 
             // txtAmount
             // 
+            this.txtAmount.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtAmount.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAmount.Location = new System.Drawing.Point(273, 112);
+            this.txtAmount.Location = new System.Drawing.Point(62, 106);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Size = new System.Drawing.Size(250, 48);
             this.txtAmount.TabIndex = 0;
             // 
             // btnDeposit
             // 
+            this.btnDeposit.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnDeposit.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeposit.Location = new System.Drawing.Point(335, 239);
+            this.btnDeposit.Location = new System.Drawing.Point(113, 220);
             this.btnDeposit.Name = "btnDeposit";
             this.btnDeposit.Size = new System.Drawing.Size(135, 56);
             this.btnDeposit.TabIndex = 1;
             this.btnDeposit.Text = "Deposit";
-            this.btnDeposit.UseVisualStyleBackColor = true;
+            this.btnDeposit.UseVisualStyleBackColor = false;
             this.btnDeposit.Click += new System.EventHandler(this.btnDeposit_Click);
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Arial Black", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(750, 405);
+            this.button1.Location = new System.Drawing.Point(331, 405);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(38, 33);
             this.button1.TabIndex = 2;
@@ -69,7 +71,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(381, 450);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnDeposit);
             this.Controls.Add(this.txtAmount);

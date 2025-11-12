@@ -109,7 +109,8 @@
             // 
             // txtHistoryrec
             // 
-            this.txtHistoryrec.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHistoryrec.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.txtHistoryrec.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHistoryrec.Location = new System.Drawing.Point(332, 136);
             this.txtHistoryrec.Multiline = true;
             this.txtHistoryrec.Name = "txtHistoryrec";

@@ -64,5 +64,12 @@ namespace ATM_Simulation__Offline_
             depositUI.Show();
             this.Hide();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            TransferUI transferUI = new TransferUI(currentUser);
+            transferUI.Show();
+            this.Hide();
+        }
     }
 }//latest
