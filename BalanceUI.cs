@@ -21,38 +21,47 @@ namespace ATM_Simulation__Offline_
             username = currentUser;
         }
 
-      private void BalanceUI_Load(object sender, EventArgs e)
+        private void BalanceUI_Load(object sender, EventArgs e)
         {
             lblUser.Text = "Welcome, " + username + "!";
 
             string path = @"C:\Git Repos\bin\Debug\DataBase.xlsx";
-            string connStr = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + path + ";Extended Properties='Excel 12.0 Xml;HDR=YES;';";
+            string connStr = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + path +
+                             ";Extended Properties='Excel 12.0 Xml;HDR=YES;'";
 
             using (OleDbConnection conn = new OleDbConnection(connStr))
             {
                 conn.Open();
 
-                
-                OleDbCommand cmd = new OleDbCommand("SELECT * FROM [userdata$] WHERE Username = ?", conn);
-                cmd.Parameters.AddWithValue("?", username);
 
-                OleDbDataReader reader = cmd.ExecuteReader();
-
-                if (reader.Read())
+                using (OleDbCommand cmd = new OleDbCommand("SELECT Balance FROM [userdata$] WHERE Username = ?", conn))
                 {
-                    lblBalance.Text = "Current Balance: " + "₱" + reader["Balance"].ToString();
-                }
-                else
-                {
-                    lblBalance.Text = "Balance not found!";
-                }
+                    cmd.Parameters.AddWithValue("?", username);
+                    OleDbDataReader reader = cmd.ExecuteReader();
 
-                reader.Close();
+                    if (reader.Read())
+                    {
+                        lblBalance.Text = "Current Balance: ₱" + reader["Balance"].ToString();
+                    }
+                    else
+                    {
+                        lblBalance.Text = "Balance not found!";
+                    }
+                    reader.Close();
+                }
+                using (OleDbCommand historyCmd = new OleDbCommand("SELECT Record FROM [datahistory$] WHERE Username = ?", conn))
+                {
+                    historyCmd.Parameters.AddWithValue("?", username);
+                    OleDbDataReader historyReader = historyCmd.ExecuteReader();
+
+                    txtHistoryrec.Clear(); 
+                    while (historyReader.Read())
+                    {
+                        txtHistoryrec.AppendText(historyReader["Record"].ToString() + Environment.NewLine);
+                    }
+                    historyReader.Close();
+                }
             }
-        }
-
-        private void txtHistory_TextChanged(object sender, EventArgs e)
-        {
 
         }
 

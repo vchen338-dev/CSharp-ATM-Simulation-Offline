@@ -29,24 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BalanceUI));
-            this.txtHistory = new System.Windows.Forms.TextBox();
             this.lblBalance = new System.Windows.Forms.Label();
             this.lblUser = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtHistoryrec = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // txtHistory
-            // 
-            this.txtHistory.Location = new System.Drawing.Point(330, 131);
-            this.txtHistory.Multiline = true;
-            this.txtHistory.Name = "txtHistory";
-            this.txtHistory.Size = new System.Drawing.Size(255, 260);
-            this.txtHistory.TabIndex = 0;
-            this.txtHistory.TextChanged += new System.EventHandler(this.txtHistory_TextChanged);
             // 
             // lblBalance
             // 
@@ -116,18 +107,29 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "HISTORY:";
             // 
+            // txtHistoryrec
+            // 
+            this.txtHistoryrec.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHistoryrec.Location = new System.Drawing.Point(332, 136);
+            this.txtHistoryrec.Multiline = true;
+            this.txtHistoryrec.Name = "txtHistoryrec";
+            this.txtHistoryrec.ReadOnly = true;
+            this.txtHistoryrec.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtHistoryrec.Size = new System.Drawing.Size(253, 252);
+            this.txtHistoryrec.TabIndex = 7;
+            // 
             // BalanceUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(620, 450);
+            this.Controls.Add(this.txtHistoryrec);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblBalance);
-            this.Controls.Add(this.txtHistory);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "BalanceUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -141,13 +143,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtHistory;
         private System.Windows.Forms.Label lblBalance;
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtHistoryrec;
     }
 }

@@ -313,6 +313,12 @@
     <Compile Include="BalanceUI.Designer.cs">
       <DependentUpon>BalanceUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="DepositUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepositUI.Designer.cs">
+      <DependentUpon>DepositUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegistrationUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -335,6 +341,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BalanceUI.resx">
       <DependentUpon>BalanceUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepositUI.resx">
+      <DependentUpon>DepositUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistrationUI.resx">
       <DependentUpon>RegistrationUI.cs</DependentUpon>

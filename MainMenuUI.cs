@@ -20,9 +20,6 @@ namespace ATM_Simulation__Offline_
             InitializeComponent();
             timer1.Start();
             currentUser = username;
-
-
-
         }
    
 
@@ -58,6 +55,13 @@ namespace ATM_Simulation__Offline_
         {
             LoginUI lgout = new LoginUI();
             lgout.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DepositUI depositUI = new DepositUI(currentUser);
+            depositUI.Show();
             this.Hide();
         }
     }
