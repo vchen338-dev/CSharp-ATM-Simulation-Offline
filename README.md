@@ -7,9 +7,10 @@ This is a testing and educational project that simulates the functionalities of 
 
 ## Upcoming Features
 
-- Account Registration UI and Function
-- Deposit Function
-- Card Function
+- Account Registration UI and Function (Added)
+- Deposit Function (Added)
+- Balance and History (Added)
+- Card Function (Coming soon)
 - Account Setting Function
 - Withdraw Function
 - Transfer Function
