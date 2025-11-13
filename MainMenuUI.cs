@@ -71,5 +71,19 @@ namespace ATM_Simulation__Offline_
             transferUI.Show();
             this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            WithdrawUI witdrawUI = new WithdrawUI(currentUser);
+            witdrawUI.Show();
+            this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            AccountSettings accset = new AccountSettings(currentUser);
+            accset.Show();
+            this.Hide();
+        }
     }
 }//latest

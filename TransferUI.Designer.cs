@@ -37,6 +37,18 @@
             btnTransfer = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
+            // btnTransfer
+            // 
+            btnTransfer.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            btnTransfer.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            btnTransfer.Location = new System.Drawing.Point(141, 254);
+            btnTransfer.Name = "btnTransfer";
+            btnTransfer.Size = new System.Drawing.Size(123, 53);
+            btnTransfer.TabIndex = 3;
+            btnTransfer.Text = "Transfer";
+            btnTransfer.UseVisualStyleBackColor = false;
+            btnTransfer.Click += new System.EventHandler(this.btnTransfer_Click);
+            // 
             // txtRecipient
             // 
             this.txtRecipient.BackColor = System.Drawing.SystemColors.InactiveCaption;
@@ -65,18 +77,6 @@
             this.txtPin.TabIndex = 2;
             this.txtPin.UseSystemPasswordChar = true;
             // 
-            // btnTransfer
-            // 
-            btnTransfer.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            btnTransfer.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            btnTransfer.Location = new System.Drawing.Point(141, 254);
-            btnTransfer.Name = "btnTransfer";
-            btnTransfer.Size = new System.Drawing.Size(123, 53);
-            btnTransfer.TabIndex = 3;
-            btnTransfer.Text = "Transfer";
-            btnTransfer.UseVisualStyleBackColor = false;
-            btnTransfer.Click += new System.EventHandler(this.btnTransfer_Click);
-            // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -102,6 +102,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.ImeMode = System.Windows.Forms.ImeMode.On;
             this.Name = "TransferUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Transfer";
             this.ResumeLayout(false);
             this.PerformLayout();

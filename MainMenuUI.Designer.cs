@@ -66,6 +66,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "WITHDRAW";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -101,6 +102,7 @@
             this.button5.TabIndex = 4;
             this.button5.Text = "ACC. SETTINGS";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // panel1
             // 

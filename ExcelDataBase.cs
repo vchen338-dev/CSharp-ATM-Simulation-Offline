@@ -119,5 +119,17 @@ namespace ATM_Simulation__Offline_
             }
         }
 
+        public static void UpdatePin(string username, string newPin)
+        {
+            using (OleDbConnection conn = new OleDbConnection(connStr))
+            {
+                conn.Open();
+                OleDbCommand cmd = new OleDbCommand("UPDATE [userdata$] SET Pin = ? WHERE Username = ?", conn);
+                cmd.Parameters.AddWithValue("?", newPin);
+                cmd.Parameters.AddWithValue("?", username);
+                cmd.ExecuteNonQuery();
+            }
+        }
+
     }
 }

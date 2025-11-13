@@ -319,6 +319,18 @@
     <Compile Include="DepositUI.Designer.cs">
       <DependentUpon>DepositUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="Acc.SettingsUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acc.SettingsUI.Designer.cs">
+      <DependentUpon>Acc.SettingsUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WtihdrawUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WtihdrawUI.Designer.cs">
+      <DependentUpon>WtihdrawUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="TransferUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -345,6 +357,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Acc.SettingsUI.resx">
+      <DependentUpon>Acc.SettingsUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BalanceUI.resx">
       <DependentUpon>BalanceUI.cs</DependentUpon>
     </EmbeddedResource>
@@ -371,6 +386,9 @@
     </Compile>
     <EmbeddedResource Include="TransferUI.resx">
       <DependentUpon>TransferUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WtihdrawUI.resx">
+      <DependentUpon>WtihdrawUI.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
