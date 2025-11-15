@@ -7,7 +7,7 @@ namespace ATM_Simulation__Offline_
 {
     public static class ExcelDataBase
     {
-        private static string path = @"C:\Git Repos\bin\Debug\DataBase.xlsx";
+        private static string path = @"C:\Github338\vchen338-dev\CSharp-ATM-Simulation-Offline\bin\Debug\DataBase.xlsx";
         private static string connStr = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + path + ";Extended Properties='Excel 12.0 Xml;HDR=YES;';";
 
         
